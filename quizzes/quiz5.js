@@ -1,5 +1,6 @@
-module.export = [
-    [
+module.export = {
+    quiz_type: 'write in',
+    quiz_list: [
         {
             question: 'What is the speed limit when driving in the ally (in mph)?',
             answer: '55'
@@ -41,4 +42,4 @@ module.export = [
             answer: ''
         }
     ]
-]
+}

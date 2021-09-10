@@ -1,5 +1,6 @@
-module.export = [
-    [
+module.export = {
+    quiz_type: 'multiple choice',
+    quiz_list: [
         {
             question: '',
             a: 'True',
@@ -61,4 +62,4 @@ module.export = [
             answer: ''
         }
     ]
-]
+}

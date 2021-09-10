@@ -13,7 +13,7 @@ body{
     font-weight: bold;
     position: relative;
     color: white;
-    left: 390;
+    left: 370;
     bottom: -4px;
 }
 
@@ -66,4 +66,19 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: x-large;
     text-align: center;
+}
+
+/***** ERROE PAGE *****/
+
+#err_message{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#err_img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    padding-top: 75px;
 }

@@ -19,3 +19,6 @@ app.listen(3000, () => console.log("listening to port 3000"))
 app.get('/', library.goto_homepage)
 app.get('/home', library.redirect_homepage)
 app.get('/about', library.goto_about)
+app.get('/quiz/:quiz_id', library.goto_quiz)
+
+app.use(library.goto_err)
