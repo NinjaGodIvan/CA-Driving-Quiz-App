@@ -37,7 +37,7 @@ body{
     position: relative;
     padding-top: 17px;
     bottom: -4px;
-
+    text-decoration: none;
 }
 
 #nav-home:hover, #nav-about:hover, #nav-contacts:hover{
@@ -58,4 +58,12 @@ body{
     left: 0;
     bottom: 10;
     width: 100%;
+}
+
+/***** ABOUT PAGE *****/
+
+.about_title{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
+    text-align: center;
 }

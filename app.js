@@ -16,5 +16,6 @@ const library = require('./library')
 //Adding port 3000 to open the website
 app.listen(3000, () => console.log("listening to port 3000"))
 
-//Routes client to homepage
 app.get('/', library.goto_homepage)
+app.get('/home', library.redirect_homepage)
+app.get('/about', library.goto_about)

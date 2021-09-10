@@ -5,6 +5,15 @@ const goto_homepage = (req, res) => {
     res.render('home', {title: 'Home'})
 }
 
+//FIX
+const redirect_homepage = (req, res) => {
+    res.redirect('/home')
+}
+
+const goto_about = (req, res) => {
+    res.render('about', {title: 'About'})
+}
+
 //Sends user to the quiz
 const goto_quiz = (req, res) => {
 
@@ -16,6 +25,6 @@ const goto_quiz = (req, res) => {
 }
 
 module.exports = {
-    goto_homepage
+    goto_homepage, goto_about, redirect_homepage
 }
 
