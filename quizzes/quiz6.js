@@ -1,4 +1,4 @@
-module.export = {
+module.exports = {
     quiz_type: 'write in',
     quiz_list: [
         {

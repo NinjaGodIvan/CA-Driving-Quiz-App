@@ -1,64 +1,74 @@
-module.export = {
+module.exports = {
     quiz_type: 'multiple choice',
     quiz_list: [
         {
             question: '',
-            a: 'True',
-            b: 'False',
+            a: '',
+            b: '',
+            c: '',
             answer: ''
         },
         {
             question: '',
-            a: 'True',
-            b: 'False',
+            a: '',
+            b: '',
+            c: '',
             answer: ''
         },
         {
             question: '',
-            a: 'True',
-            b: 'False',
+            a: '',
+            b: '',
+            c: '',
             answer: ''
         },
         {
             question: '',
-            a: 'True',
-            b: 'False',
+            a: '',
+            b: '',
+            c: '',
             answer: ''
         },
         {
             question: '',
-            a: 'True',
-            b: 'False',
+            a: '',
+            b: '',
+            c: '',
             answer: ''
         },
         {
             question: '',
-            a: 'True',
-            b: 'False',
+            a: '',
+            b: '',
+            c: '',
             answer: ''
         },
         {
             question: '',
-            a: 'True',
-            b: 'False',
+            a: '',
+            b: '',
+            c: '',
             answer: ''
         },
         {
             question: '',
-            a: 'True',
-            b: 'False',
+            a: '',
+            b: '',
+            c: '',
             answer: ''
         },
         {
             question: '',
-            a: 'True',
-            b: 'False',
+            a: '',
+            b: '',
+            c: '',
             answer: ''
         },
         {
             question: '',
-            a: 'True',
-            b: 'False',
+            a: '',
+            b: '',
+            c: '',
             answer: ''
         }
     ]

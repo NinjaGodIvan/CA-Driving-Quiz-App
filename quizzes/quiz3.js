@@ -1,4 +1,4 @@
-module.export = {
+module.exports = {
     quiz_type: 'multiple choice',
     quiz_list: [
         {
