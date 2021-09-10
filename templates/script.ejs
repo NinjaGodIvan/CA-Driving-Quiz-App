@@ -1,0 +1,46 @@
+<script>
+
+    //Displays the current time and date using 12-hour format
+    const getCurrentDateAndTime = () => {
+
+        //Reformats the time
+        const reformatTime = (hours, minutes) => {
+
+            //Adds zero to the minutes
+            if(minutes >= 0 && minutes < 10){
+                minutes = `0${minutes}`
+            }
+
+            //Adds AM/PM feature
+            var am_pm
+            if(hours >= 12 && hours <= 23){
+                am_pm = "PM"
+            } else {
+                am_pm = "AM"
+            }
+
+            //Converts 24hr to 12hr
+            if(hours == 0){ //12AM
+                hours = 12
+            }else if(hours > 12){ //1PM to 11:59PM
+                hours -= 12
+            }
+
+            return `${hours}:${minutes}${am_pm}`
+        }
+
+        //Gets the current date
+        var d = new Date();
+        //List of all months
+        var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+        document.getElementById("time").innerHTML = `${months[d.getMonth()]}, ${d.getDate()} ${d.getFullYear()} ${reformatTime(d.getHours(), d.getMinutes())}`
+    }
+
+    //Date and time is updated every second.
+    setInterval(getCurrentDateAndTime, 1000)
+
+    //Need to call to prevent the delay of displaying time by 1 second
+    getCurrentDateAndTime()
+
+</script>
