@@ -1,64 +1,44 @@
 module.exports = {
-    quiz_type: 'multiple choice',
-    quiz_list: [
+    quiz_type: 'true or false',
+    quiz_problems: [
         {
             question: '',
-            a: 'True',
-            b: 'False',
             answer: ''
         },
         {
             question: '',
-            a: 'True',
-            b: 'False',
             answer: ''
         },
         {
             question: '',
-            a: 'True',
-            b: 'False',
             answer: ''
         },
         {
             question: '',
-            a: 'True',
-            b: 'False',
             answer: ''
         },
         {
             question: '',
-            a: 'True',
-            b: 'False',
             answer: ''
         },
         {
             question: '',
-            a: 'True',
-            b: 'False',
             answer: ''
         },
         {
             question: '',
-            a: 'True',
-            b: 'False',
             answer: ''
         },
         {
             question: '',
-            a: 'True',
-            b: 'False',
             answer: ''
         },
         {
             question: '',
-            a: 'True',
-            b: 'False',
             answer: ''
         },
         {
             question: '',
-            a: 'True',
-            b: 'False',
             answer: ''
         }
     ]

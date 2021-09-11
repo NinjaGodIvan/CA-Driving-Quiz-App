@@ -52,14 +52,19 @@ body{
 #quiz-grid{
     display: grid;
     grid-template-columns: 250px 250px 250px;
-    grid-row-gap: 10px;
+    grid-row-gap: 5px;
     grid-column-gap: 30px;
     justify-content: center;
 }
 
 .quiz_img{
-    width: 250px;
-    height: 150px;
+    width: 245px;
+    height: 145px;
+    border: black solid 2px;
+}
+
+.quiz_img:hover{
+    border-color: red;
 }
 
 .quiz_title{
@@ -84,6 +89,24 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: x-large;
     text-align: center;
+}
+
+/***** QUIZ PAGE *****/
+form{
+    margin: 0 auto; 
+    width: 600px;
+}
+.quiz-question, .quiz-choice{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.quiz-question{
+    font-weight: bold;
+}
+
+.quiz-choice{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
 }
 
 /***** ERROR PAGE *****/

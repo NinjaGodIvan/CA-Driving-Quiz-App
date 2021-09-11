@@ -1,6 +1,6 @@
 module.exports = {
     quiz_type: 'multiple choice',
-    quiz_list: [
+    quiz_problems: [
         {
             question: 'What does the red line on the curve mean?',
             a: 'No vehicle is allowed to park there',
@@ -68,6 +68,7 @@ module.exports = {
             question: 'Do you have the right of way when turning left against an unprotected left turn light?',
             a: 'Yes, you have the right of way.',
             b: 'No, you must yield right of way to drivers from the opposite side.',
+            c: 'Never!',
             answer: 'No, you must yield right of way to drivers from the opposite side.'
         }
     ]

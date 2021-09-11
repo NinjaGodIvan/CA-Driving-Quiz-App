@@ -1,6 +1,6 @@
 module.exports = {
     quiz_type: 'multiple choice',
-    quiz_list: [
+    quiz_problems: [
         {
             question: '',
             a: '',

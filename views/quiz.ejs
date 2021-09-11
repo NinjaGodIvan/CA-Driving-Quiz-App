@@ -5,11 +5,27 @@
     <body>
 
         <!-- Navigation Template-->
-        <%- include('../templates/nav.ejs') %>
-
+        <%- include('../templates/nav.ejs') %><br>
         <!-- Renders Quiz Form -->
-        <form>
-            
+        <form id='quiz-form'>
+            <% var count = 1 %>
+            <% quiz_problems.forEach(problem => { %>
+                <label class='quiz-question' name='question<%= count%>'><%= problem.question %></label><br>
+                <% if(quiz_type == 'multiple choice'){ %>
+                    <input type="radio" name='answer<%= count%>' value="<%= problem.a %>" required><label class='quiz-choice'><%= problem.a %></label><br>
+                    <input type="radio" name='answer<%= count%>' value="<%= problem.b %>" ><label class='quiz-choice'><%= problem.b %></label><br>
+                    <input type="radio" name='answer<%= count%>' value="<%= problem.c %>" ><label class='quiz-choice'><%= problem.c %></label><br><br>
+                <% } else if(quiz_type == 'true or false'){ %>
+                    <input class='quiz-choice' type="radio" name='answer<%= count%>' value='True' required><label>True</label><br>
+                    <input class='quiz-choice' type="radio" name='answer<%= count%>' value='False' ><label>False</label><br><br>
+                <% } else if(quiz_type == 'write in'){ %>
+                    <label>Answer:</label><input class='quiz-choice' type="text" name='answer<%= count%>' width="100" height="30" required><br><br>
+                <% } else { %>
+
+                <% } %>
+                <% count += 1 %>
+            <% }) %>
+            <button>Submit</button>
         </form>
 
     </body>

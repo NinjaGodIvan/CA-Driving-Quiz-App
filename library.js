@@ -20,11 +20,9 @@ const goto_quiz = (req, res) => {
     //Gets the quiz id from URL
     const quiz_id = req.params.quiz_id;
     //Gets the quiz file based on quiz id and deconstructs it
-    const {quiz_type, quiz_list} = require(`./quizzes/${quiz_id}`)
+    const {quiz_type, quiz_problems} = require(`./quizzes/${quiz_id}`)
 
-    console.log(quiz_list)
-
-    //res.render('quiz', {title: 'Quiz', quiz_type, quiz_list})
+    res.render('quiz', {title: 'Quiz', quiz_type, quiz_problems})
 }
 
 //Sends user to error page
