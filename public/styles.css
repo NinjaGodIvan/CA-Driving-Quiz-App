@@ -109,6 +109,13 @@ form{
     font-size: 14px;
 }
 
+/***** RESULTS PAGE *****/
+
+#results-img{
+    width: 150px;
+    height: 150px;
+}
+
 /***** ERROR PAGE *****/
 
 #err_message{

@@ -1,6 +1,6 @@
 module.exports = {
-    quiz_type: 'true or false',
-    quiz_problems: [
+    type: 'true or false',
+    problems: [
         {
             question: '',
             answer: ''

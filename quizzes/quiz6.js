@@ -1,6 +1,6 @@
 module.exports = {
-    quiz_type: 'write in',
-    quiz_problems: [
+    type: 'write in',
+    problems: [
         {
             question: '',
             answer: ''

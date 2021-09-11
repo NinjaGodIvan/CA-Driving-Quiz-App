@@ -1,6 +1,6 @@
 module.exports = {
-    quiz_type: 'multiple choice',
-    quiz_problems: [
+    type: 'multiple choice',
+    problems: [
         {
             question: 'What does the red line on the curve mean?',
             a: 'No vehicle is allowed to park there',
@@ -27,7 +27,7 @@ module.exports = {
             a: 'Annoy him (her)',
             b: 'Escape!',
             c: 'Pull over to the right and stop',
-            answer: 'c'
+            answer: 'Pull over to the right and stop'
         },
         {
             question: 'What does the yellow light on the traffic light mean?',

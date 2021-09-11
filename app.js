@@ -6,6 +6,8 @@ const app = express()
 
 //Apply files from 'public' folder
 app.use(express.static('public'))
+//For req body parsing
+app.use(express.urlencoded({ extended: true }));
 
 //Sets EJS Engine to enable JS templates
 app.set('view engine', 'ejs')
@@ -20,5 +22,7 @@ app.get('/', library.goto_homepage)
 app.get('/home', library.redirect_homepage)
 app.get('/about', library.goto_about)
 app.get('/quiz/:quiz_id', library.goto_quiz)
+
+app.post('/results/:quiz_id', library.results_handler)
 
 app.use(library.goto_err)

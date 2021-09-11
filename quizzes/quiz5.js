@@ -1,6 +1,6 @@
 module.exports = {
-    quiz_type: 'write in',
-    quiz_problems: [
+    type: 'write in',
+    problems: [
         {
             question: 'What is the speed limit when driving in the ally (in mph)?',
             answer: '55'
