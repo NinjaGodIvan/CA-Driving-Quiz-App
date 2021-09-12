@@ -23,7 +23,7 @@ module.exports = {
             answer: 'Enter the rightest lane of the road and stop'
         },
         {
-            question: 'If the police has sirens on and is following you, what do you do?',
+            question: 'If the police car is following with sirens, on you:',
             a: 'Annoy him (her)',
             b: 'Escape!',
             c: 'Pull over to the right and stop',

@@ -112,8 +112,24 @@ form{
 /***** RESULTS PAGE *****/
 
 #results-img{
-    width: 150px;
-    height: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;    
+    height: 28%;
+}
+
+#score, #score-message{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+#score{
+    font-size: 35px;
+}
+
+#score-message{
+    font-size: 20px;
 }
 
 /***** ERROR PAGE *****/
