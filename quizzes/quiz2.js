@@ -1,4 +1,5 @@
 module.exports = {
+    name: 'Quiz 2',
     type: 'multiple choice',
     problems: [
         {
@@ -42,7 +43,7 @@ module.exports = {
             answer: 'Park you car with your wheels towards the curb'
         },
         {
-            question: 'What does the double solid yellow line in the road mean?',
+            question: 'What does the double solid yellow line indicate?',
             a: 'You can pass it',
             b: 'You cannot pass it',
             c: 'You are exiting the road',
@@ -50,7 +51,7 @@ module.exports = {
             answer: 'You cannot pass it'
         },
         {
-            question: 'What does the white broken line in the road mean?',
+            question: 'What does the white broken line indicate?',
             a: 'You can pass it',
             b: 'You cannot pass it',
             c: 'You are exiting the road',
@@ -58,28 +59,68 @@ module.exports = {
             answer: 'You can pass it'
         },
         {
-            question: '',
-            a: '',
-            b: '',
-            c: '',
-            d: 'test',
+            question: 'If someone is calling you while driving, you must:',
+            a: 'Answer the call',
+            b: 'Send a text message',
+            c: 'Send a voice message',
+            d: 'Don\'t answer the call',
+            answer: 'Don\'t answer the call'
+        },
+        {
+            question: 'When is it legal to watch the police incident?',
+            a: 'You are interested with the crime',
+            b: 'You currently possess a driver\'s license',
+            c: 'You have passengers with you to describe the crime.',
+            d: 'None of the above',
             answer: ''
         },
         {
-            question: '',
-            a: '',
-            b: '',
-            c: '',
-            d: 'test',
-            answer: ''
+            question: 'What is the speed limit when children are present in the road?',
+            a: '20mph',
+            b: '25mph',
+            c: '30mph',
+            d: '35mph',
+            answer: '25mph'
         },
         {
-            question: '',
-            a: '',
-            b: '',
-            c: '',
-            d: 'test',
-            answer: ''
+            question: 'What is the speed limit when children are present in the road?',
+            a: '20mph',
+            b: '25mph',
+            c: '30mph',
+            d: '35mph',
+            answer: '25mph'
+        },
+        {
+            question: 'What is the speed limit when children are present in the road?',
+            a: '20mph',
+            b: '25mph',
+            c: '30mph',
+            d: '35mph',
+            answer: '25mph'
+        },
+        {
+            question: 'What is the speed limit when children are present in the road?',
+            a: '20mph',
+            b: '25mph',
+            c: '30mph',
+            d: '35mph',
+            answer: '25mph'
+        },
+        {
+            question: 'What is the speed limit when children are present in the road?',
+            a: '20mph',
+            b: '25mph',
+            c: '30mph',
+            d: '35mph',
+            answer: '25mph'
+        },
+        {
+            question: 'What is the speed limit when children are present in the road?',
+            a: '20mph',
+            b: '25mph',
+            c: '30mph',
+            d: '35mph',
+            answer: '25mph'
         }
     ]
 }

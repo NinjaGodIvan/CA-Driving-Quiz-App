@@ -1,4 +1,5 @@
 module.exports = {
+    name: 'Quiz 3',
     type: 'true or false',
     problems: [
         {

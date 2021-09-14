@@ -1,4 +1,5 @@
 module.exports = {
+    name: 'Quiz 1',
     type: 'multiple choice',
     problems: [
         {

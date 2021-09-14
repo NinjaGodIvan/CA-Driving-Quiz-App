@@ -18,11 +18,14 @@ const library = require('./library')
 //Adding port 3000 to open the website
 app.listen(3000, () => console.log("listening to port 3000"))
 
+//Index routes
 app.get('/', library.goto_homepage)
 app.get('/home', library.redirect_homepage)
+app.get('/home/:quiz_id', library.goto_quiz)
+app.post('/home/:quiz_id', library.results_handler)
+
+//About route
 app.get('/about', library.goto_about)
-app.get('/quiz/:quiz_id', library.goto_quiz)
 
-app.post('/results/:quiz_id', library.results_handler)
-
+//Error route
 app.use(library.goto_err)

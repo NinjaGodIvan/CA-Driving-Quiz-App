@@ -19,15 +19,15 @@ const goto_quiz = (req, res) => {
 
     //Gets the quiz id from URL
     const quiz_id = req.params.quiz_id;
-    //Gets quiz type and problem from the quiz file based on quiz id
-    const {type, problems} = require(`./quizzes/${quiz_id}`)
+    //Gets the quiz's name, its type and problem from the quiz file based on quiz id
+    const {name, type, problems} = require(`./quizzes/${quiz_id}`)
 
-    res.render('quiz', {title: 'Quiz', quiz_id, type, problems})
+    res.render('quiz', {title: name, type, problems, quiz_id})
 }
 
 //Sends user to error page
 const goto_err = (req, res) => {
-    res.render('error', {title: 'Not Founded'})
+    res.render('error', {title: 'Uh Oh'})
 }
 
 //Handles user's input, compute the total score, and renders results page
