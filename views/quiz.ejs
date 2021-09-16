@@ -21,10 +21,10 @@
                         <br>
                     <% } %>
                 <% } else if(type == 'true or false'){ %>
-                    <input class='quiz-choice' type="radio" name='answer<%= count%>' value='True' required><label>True</label><br>
-                    <input class='quiz-choice' type="radio" name='answer<%= count%>' value='False' ><label>False</label><br><br>
+                    <input type="radio" name='answer<%= count%>' value='True' required><label class='quiz-choice'>True</label><br>
+                    <input type="radio" name='answer<%= count%>' value='False' ><label class='quiz-choice'>False</label><br><br>
                 <% } else if(type == 'write in'){ %>
-                    <label>Answer:</label><input class='quiz-choice' type="text" name='answer<%= count%>' width="100" height="30" required><br><br>
+                    <label class='quiz-choice'>Answer:</label><input type="text" name='answer<%= count%>' width="100" height="30" required><br><br>
                 <% } else { %>
 
                 <% } %>
