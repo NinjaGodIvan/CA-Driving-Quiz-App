@@ -1,0 +1,41 @@
+<html>
+    <!-- Head Template-->
+    <%- include('../templates/head.ejs') %>
+
+    <body>
+
+        <!-- Navigation Template-->
+        <%- include('../templates/nav.ejs') %><br>
+        <!-- Renders Quiz Form -->
+        <form id='quiz-form' action='/home/<%= quiz_id %>' method="POST">
+            <% var count = 1 %>
+            <% problems.forEach(problem => { %>
+                <label class='quiz-question' for='answer' name='question<%= count%>'><%= count %>. <%= problem.question %></label><br>
+                <% if(type == 'multiple choice'){ %>
+                    <input type="radio" name='answer<%= count%>' value="<%= problem.a %>" required><label class='quiz-choice'><%= problem.a %></label><br>
+                    <input type="radio" name='answer<%= count%>' value="<%= problem.b %>" ><label class='quiz-choice'><%= problem.b %></label><br>
+                    <input type="radio" name='answer<%= count%>' value="<%= problem.c %>" ><label class='quiz-choice'><%= problem.c %></label><br>
+                    <% if(problem.d){%>
+                        <input type="radio" name='answer<%= count%>' value="<%= problem.d %>" ><label class='quiz-choice'><%= problem.d %></label><br><br>
+                    <% } else { %>
+                        <br>
+                    <% } %>
+                <% } else if(type == 'true or false'){ %>
+                    <input type="radio" name='answer<%= count%>' value='True' required><label class='quiz-choice'>True</label><br>
+                    <input type="radio" name='answer<%= count%>' value='False' ><label class='quiz-choice'>False</label><br><br>
+                <% } else if(type == 'write in'){ %>
+                    <label class='quiz-choice'>Answer:</label><input type="text" name='answer<%= count%>' width="100" height="30" required><br><br>
+                <% } else { %>
+
+                <% } %>
+                <% count += 1 %>
+            <% }) %>
+            <button>Submit</button>
+        </form>
+
+    </body>
+
+    <!-- Script Template -->
+    <%- include('../templates/script.ejs') %>
+
+</html>
