@@ -15,11 +15,7 @@
                     <input type="radio" name='answer<%= count%>' value="<%= problem.a %>" required><label class='quiz-choice'><%= problem.a %></label><br>
                     <input type="radio" name='answer<%= count%>' value="<%= problem.b %>" ><label class='quiz-choice'><%= problem.b %></label><br>
                     <input type="radio" name='answer<%= count%>' value="<%= problem.c %>" ><label class='quiz-choice'><%= problem.c %></label><br>
-                    <% if(problem.d){%>
-                        <input type="radio" name='answer<%= count%>' value="<%= problem.d %>" ><label class='quiz-choice'><%= problem.d %></label><br><br>
-                    <% } else { %>
-                        <br>
-                    <% } %>
+                    <% if(problem.d){%><input type="radio" name='answer<%= count%>' value="<%= problem.d %>" ><label class='quiz-choice'><%= problem.d %></label><br><br> <% } else { %> <br> <% } %>
                 <% } else if(type == 'true or false'){ %>
                     <input type="radio" name='answer<%= count%>' value='True' required><label class='quiz-choice'>True</label><br>
                     <input type="radio" name='answer<%= count%>' value='False' ><label class='quiz-choice'>False</label><br><br>

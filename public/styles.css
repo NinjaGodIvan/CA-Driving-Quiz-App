@@ -85,13 +85,45 @@ body{
 
 /***** ABOUT PAGE *****/
 
+.about_title, .about_desc, #quiz_types li{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    left: 300;
+    width: 810px;
+    /* border-style: solid; */
+}
+
 .about_title{
+    font-size: x-large;
+}
+/* CSS for the quiz types */
+#quiz_types li{
+    font-size: 15px;
+}
+
+/***** CONTACTS *****/
+
+#contacts-grid{
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-column-gap: 210px;
+    /* border-style: solid; */
+    justify-content: center;
+}
+
+/* .contacts-type{
+    border-style: solid;
+} */
+
+/* CSS for the types of contacts*/
+.contacts-type > h1{
+    text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: x-large;
-    text-align: center;
 }
 
 /***** QUIZ PAGE *****/
+
 form{
     margin: 0 auto; 
     width: 600px;
@@ -116,17 +148,22 @@ form{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 15%;    
-    height: 28%;
+    width: 250px;    
+    height: 250px;
+    padding-top: 50px;
 }
 
 #score, #score-message{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
 }
 
 #score{
-    font-size: 35px;
+    padding-top: 20px;
+}
+
+#score{
+    font-size: 28px;
 }
 
 #score-message{

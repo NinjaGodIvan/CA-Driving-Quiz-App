@@ -8,7 +8,7 @@
         <%- include('../templates/nav.ejs') %><br>
  
         <img id='results-img' src="<%= image %>" alt='image not found'>
-        <h1 id='score'>Score: <%= correct %>/<%= max_score%></h1>
+        <h1 id='score'>Score: <%= correct %>/<%= max_score%> (<%= user_score_pct %>%)</h1>
         <p id='score-message'><%= message %></p>
     </body>
 

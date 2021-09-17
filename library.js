@@ -5,6 +5,11 @@ const goto_homepage = (req, res) => {
     res.render('home', {title: 'Home'})
 }
 
+//Redirects to homepage
+const redirect_homepage = (req, res) => {
+    res.redirect('home')
+}
+
 //Sends user to about page
 const goto_about = (req, res) => {
     res.render('about', {title: 'About'})
@@ -56,11 +61,14 @@ const render_results = (req, res) => {
         i++
     })
 
+    //Percentage of the user score * 100
+    var user_score_pct = ~~((correct / max_score) * 100)
+
     //Renders results page depending on the user's score
-    if(correct / max_score >= 0.8){
-        res.render('results',{title: 'Passed!', image: '/images/passed.png', correct, max_score, message: 'Congratulations! You Passed!'})
+    if(user_score_pct >= 80){
+        res.render('results',{title: 'Passed!', image: '/images/happy_face.png', correct, max_score, user_score_pct,message: 'Congratulations! You Passed!'})
     } else {
-        res.render('results',{title: 'Failed', image: '/images/failed.png', correct, max_score, message: 'Please review the CA Handbook.'})
+        res.render('results',{title: 'Failed', image: '/images/sad_face.png', correct, max_score, user_score_pct, message: 'Please review the CA Handbook.'})
     }
 }
 
@@ -70,5 +78,6 @@ module.exports = {
     goto_quiz, 
     goto_contacts, 
     goto_err, 
-    render_results
+    render_results,
+    redirect_homepage
 }
