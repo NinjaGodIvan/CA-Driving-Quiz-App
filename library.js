@@ -5,11 +5,7 @@ const goto_homepage = (req, res) => {
     res.render('home', {title: 'Home'})
 }
 
-//FIX
-const redirect_homepage = (req, res) => {
-    res.redirect('/home')
-}
-
+//Sends user to about page
 const goto_about = (req, res) => {
     res.render('about', {title: 'About'})
 }
@@ -25,13 +21,18 @@ const goto_quiz = (req, res) => {
     res.render('quiz', {title: name, type, problems, quiz_id})
 }
 
+//Sends user to contacts page
+const goto_contacts = (req, res) => {
+    res.render('contacts', {title: 'Contacts'})
+}
+
 //Sends user to error page
 const goto_err = (req, res) => {
     res.render('error', {title: 'Uh Oh'})
 }
 
 //Handles user's input, compute the total score, and renders results page
-const results_handler = (req, res) => {
+const render_results = (req, res) => {
 
     //Gets the quiz id from URL
     const quiz_id = req.params.quiz_id;
@@ -64,6 +65,10 @@ const results_handler = (req, res) => {
 }
 
 module.exports = {
-    goto_homepage, goto_about, goto_quiz, redirect_homepage, goto_err, results_handler
+    goto_homepage, 
+    goto_about, 
+    goto_quiz, 
+    goto_contacts, 
+    goto_err, 
+    render_results
 }
-

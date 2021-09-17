@@ -98,16 +98,17 @@ form{
 }
 .quiz-question, .quiz-choice{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
 }
 
 .quiz-question{
     font-weight: bold;
+    /* font-size: 14px; */
 }
 
-.quiz-choice{
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 14px;
-}
+/* .quiz-choice{
+    font-size: 15px;
+} */
 
 /***** RESULTS PAGE *****/
 

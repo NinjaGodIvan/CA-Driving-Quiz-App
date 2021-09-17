@@ -39,8 +39,8 @@ module.exports = {
             answer: 'True'
         },
         {
-            question: '',
-            answer: ''
+            question: 'At a highway, the rightest lane is the fastest lane.',
+            answer: 'False'
         }
     ]
 }
