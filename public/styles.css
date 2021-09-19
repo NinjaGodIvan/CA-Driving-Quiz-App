@@ -103,23 +103,28 @@ body{
 
 /***** CONTACTS *****/
 
-#contacts-grid{
+.contacts-type, #contact-info p{
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+#media-grid{
     display: grid;
-    grid-template-columns: 200px 200px;
-    grid-column-gap: 210px;
-    /* border-style: solid; */
+    grid-template-columns: auto auto auto auto auto;
+    grid-column-gap: 40px;
     justify-content: center;
 }
 
-/* .contacts-type{
-    border-style: solid;
-} */
+/* Social Media Images */
+#media-grid img{
+    width: 70px;
+    height: 70px;
+}
 
-/* CSS for the types of contacts*/
-.contacts-type > h1{
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: x-large;
+#contact-info p{
+    font-weight: bold;
+    font-size: 18px;
 }
 
 /***** QUIZ PAGE *****/
@@ -133,14 +138,7 @@ form{
     font-size: 15px;
 }
 
-.quiz-question{
-    font-weight: bold;
-    /* font-size: 14px; */
-}
-
-/* .quiz-choice{
-    font-size: 15px;
-} */
+.quiz-question{font-weight: bold;}
 
 /***** RESULTS PAGE *****/
 
