@@ -46,8 +46,7 @@ const render_results = (req, res) => {
     //Array of user's answers
     const userAnswers = Object.entries(req.body)
 
-    console.log('render_results method called')
-
+    // console.log(typeof(userAnswers))
 
     //User's correct answer
     let correct = 0
@@ -57,10 +56,36 @@ const render_results = (req, res) => {
     let i = 0
 
     //Checks if the user's answers matches the correct answer
-    userAnswers.forEach(([key, answer])=> {
-        if(answer == problems[i].answer){
-            correct++
+    userAnswers.forEach(([key, user_answer])=> {
+
+        //Gets the answer(s) from the problem
+        const {answer} = problems[i]
+
+        var isCorrect = true
+
+        for(let j = 0; j < answer.length; j++){
+
+            // console.log('question',i+1)
+            // console.log(user_answer)
+            // console.log(answer, '\n')
+
+            if(user_answer[j] !== answer[j]){
+                isCorrect = false
+                break
+            }
+
+            // } else {
+            //     console.log('question',i+1,'is correct')
+            // }
         }
+
+        /**
+         * 1: Users must have all correct answers from a question
+         * 2: For checkboxes, the length of both user's and original correct answers are the same
+         */
+        if(isCorrect && user_answer.length == answer.length)
+            correct++
+        
         i++
     })
 
