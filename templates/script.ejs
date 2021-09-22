@@ -1,5 +1,38 @@
 <script>
 
+    //Checks if each question has at least one 'checkbox' choice checked 
+    const hasOneCheckedBox = (length) => {
+
+        //Iterates through a list of questions
+        for(let i = 0; i < length; i++){
+
+            //Gets all choices from the question
+            var choices = document.getElementsByName(`answer${i+1}[]`)
+
+            //Needs to check if the question contains checkboxes
+            if(choices[0].type == 'checkbox'){
+
+                //Returns true if there is at least one checked box
+                var checked = false
+
+                //Iterates through all checkboxes from the question
+                for(let j = 0; j < choices.length; j++){
+                    if(choices[j].checked){
+                        checked = true
+                        break
+                    }
+                }
+
+                if(!checked){
+                    alert(`You need to check at least one box from question ${i+1}`)
+                    return false
+                }
+            }
+        }
+
+       return true
+    }
+
     //Displays the current time and date using 12-hour format
     const getCurrentDateAndTime = () => {
 

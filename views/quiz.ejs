@@ -7,24 +7,30 @@
         <!-- Navigation Template-->
         <%- include('../templates/nav.ejs') %><br>
         <!-- Renders Quiz Form -->
-        <form id='quiz-form' action='/home/<%= quiz_id %>' method="POST">
+        <form id='quiz-form' action='/home/<%= quiz_id %>' method="POST" >
             <% var count = 1 %>            
             <% problems.forEach(problem => { %>
                 <!-- Deconstructs the problem -->
                 <% const {input_type, question, a, b, c, d, e} = problem %>
                 <!-- Question -->
-                <label class='quiz-question' for='answer<%= count%>' name='question<%= count%>'><%= count %>. <%= question %></label><br>
+                <label class='quiz-question' for='answer<%= count%>[]' name='question<%= count%>'><%= count %>. <%= question %></label><br>
                 <!-- Answer Choices -->
-                <input type="<%= input_type %>" name='answer<%= count%>' value="<%= a %>" required><label class='quiz-choice'><%= a %></label><br>
-                <input type="<%= input_type %>" name='answer<%= count%>' value="<%= b %>" ><label class='quiz-choice'><%= b %></label><br>
+                <% if(input_type == 'radio'){ %>
+                    <input type="<%= input_type %>" name='answer<%= count%>[]' value="<%= a %>" required><label class='quiz-choice'><%= a %></label><br>
+                <% } else { %><!-- checkbox -->
+                    <input type="<%= input_type %>" name='answer<%= count%>[]' value="<%= a %>"><label class='quiz-choice'><%= a %></label><br>
+                <% } %>
+
+                <input type="<%= input_type %>" name='answer<%= count%>[]' value="<%= b %>"><label class='quiz-choice'><%= b %></label><br>
+
                 <!-- Additional Answer Choices (c-e)-->
-                <% if(c){%><input type="<%= input_type %>" name='answer<%= count%>' value="<%= c %>" ><label class='quiz-choice'><%= c %></label><br><% } %>
-                <% if(d){%><input type="<%= input_type %>" name='answer<%= count%>' value="<%= d %>" ><label class='quiz-choice'><%= d %></label><br><% } %>
-                <% if(e){%><input type="<%= input_type %>" name='answer<%= count%>' value="<%= e %>" ><label class='quiz-choice'><%= e %></label><br><% } %>
+                <% if(c){%><input type="<%= input_type %>" name='answer<%= count%>[]' value="<%= c %>"><label class='quiz-choice' ><%= c %></label><br><% } %>
+                <% if(d){%><input type="<%= input_type %>" name='answer<%= count%>[]' value="<%= d %>"><label class='quiz-choice' ><%= d %></label><br><% } %>
+                <% if(e){%><input type="<%= input_type %>" name='answer<%= count%>[]' value="<%= e %>"><label class='quiz-choice' ><%= e %></label><br><% } %>
                 <br>
                 <% count += 1 %>
             <% }) %>
-            <button>Submit</button>
+            <button onclick='return hasOneCheckedBox(<%= problems.length %>)'>Submit</button>
         </form>
 
     </body>

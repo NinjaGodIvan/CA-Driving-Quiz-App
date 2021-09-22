@@ -46,6 +46,9 @@ const render_results = (req, res) => {
     //Array of user's answers
     const userAnswers = Object.entries(req.body)
 
+    console.log('render_results method called')
+
+
     //User's correct answer
     let correct = 0
     //Maximum score of the quiz
