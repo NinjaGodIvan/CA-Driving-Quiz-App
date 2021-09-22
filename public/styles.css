@@ -129,9 +129,13 @@ body{
 
 /***** QUIZ PAGE *****/
 
-form{
+#quiz-form{
     margin: 0 auto; 
     width: 600px;
+}
+
+#quiz-form input{
+    padding-top: 10px;
 }
 .quiz-question, .quiz-choice{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -139,6 +143,7 @@ form{
 }
 
 .quiz-question{font-weight: bold;}
+
 
 /***** RESULTS PAGE *****/
 

@@ -20,10 +20,10 @@ const goto_quiz = (req, res) => {
 
     //Gets the quiz id from URL
     const quiz_id = req.params.quiz_id;
-    //Gets the quiz's name, its type and problem from the quiz file based on quiz id
-    const {name, type, problems} = require(`./quizzes/${quiz_id}`)
+    //Gets the quiz's name, and problems from the quiz file based on quiz id
+    const {name, problems} = require(`./quizzes/${quiz_id}`)
 
-    res.render('quiz', {title: name, type, problems, quiz_id})
+    res.render('quiz', {title: name, problems, quiz_id})
 }
 
 //Sends user to contacts page
