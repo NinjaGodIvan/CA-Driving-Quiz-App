@@ -46,8 +46,6 @@ const render_results = (req, res) => {
     //Array of user's answers
     const userAnswers = Object.entries(req.body)
 
-    // console.log(typeof(userAnswers))
-
     //User's correct answer
     let correct = 0
     //Maximum score of the quiz
@@ -55,41 +53,55 @@ const render_results = (req, res) => {
     //Iterates through every answer from the problem
     let i = 0
 
-    //Checks if the user's answers matches the correct answer
+    // console.log(userAnswers)
+
+    //Iterates through all user's answer(s) from every problem from the quiz
     userAnswers.forEach(([key, user_answer])=> {
 
-        //Gets the answer(s) from the problem
-        const {answer} = problems[i]
+        //Gets the answer(s) and its input type from the problem
+        const {answer, input_type} = problems[i]
 
+        //Checks if the user's answer is correct
         var isCorrect = true
 
+        //Iterates through all correct answers from the problem
         for(let j = 0; j < answer.length; j++){
 
-            // console.log('question',i+1)
-            // console.log(user_answer)
-            // console.log(answer, '\n')
+            if(typeof(user_answer[j]) != 'undefined'){
 
-            if(user_answer[j] !== answer[j]){
-                isCorrect = false
-                break
+                /**
+                 * 
+                 * For text answers, The user's answer be modified as follow:
+                 * 1) trimming the string (removing trailing and leading spaces)
+                 * 2) lowercasing the answers (all 'text' answers are lowercased)
+                 */
+                if(input_type == 'text')
+                    user_answer[j] = user_answer[j].trim().toLowerCase()
+
+                // console.log(`[${user_answer[j]}]`)
+
+                if(user_answer[j] != answer[j]){
+                    isCorrect = false
+                    break
+                } else {
+                    // console.log(`Answer choice ${j+1} correct on question ${i+1}!`)
+                }
             }
-
-            // } else {
-            //     console.log('question',i+1,'is correct')
-            // }
         }
 
         /**
          * 1: Users must have all correct answers from a question
          * 2: For checkboxes, the length of both user's and original correct answers are the same
          */
-        if(isCorrect && user_answer.length == answer.length)
+        if(isCorrect && user_answer.length == answer.length){
+            // console.log(`\n QUESTION ${i+1} IS CORRECT`)
             correct++
+        }
         
         i++
     })
 
-    //Percentage of the user score * 100
+    // Percentage of the user score * 100
     var user_score_pct = ~~((correct / max_score) * 100)
 
     //Renders results page depending on the user's score
