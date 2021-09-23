@@ -14,25 +14,33 @@
                 <!-- Deconstructs the problem -->
                 <% const {input_type, question, a, b, c, d, e} = problem %>
 
-                <!-- Question -->
+                <!-- QUESTION -->
                 <label class='quiz-question' for='answer<%= count%>[]' name='question<%= count%>'><%= count %>. <%= question %></label><br>
 
-                <!-- First answer choice or text input -->
-                <% if(input_type == 'radio'){ %> <!-- Radio -->
-                    <input type="radio" name='answer<%= count%>[]' value="<%= a %>" required><label class='quiz-choice'><%= a %></label><br>
-                <% } else if(input_type == 'text'){ %> <!-- Text -->
+                <!-- Fill in the Answer -->
+                <% if(input_type == 'text'){ %> <!-- Radio -->
                     <input type="text" name='answer<%= count%>[]' style='margin-top: 10px;' size=20 required><br>
-                <% } else { %><!-- Checkbox -->
-                    <input type="checkbox" name='answer<%= count%>[]' value="<%= a %>"><label class='quiz-choice'><%= a %></label><br>
-                <% } %>
 
-                <!-- Additional Answer Choices (b-e)-->
-                <% if(b){%><input type="<%= input_type %>" name='answer<%= count%>[]' value="<%= b %>"><label class='quiz-choice' ><%= b %></label><br><% } %>
-                <% if(c){%><input type="<%= input_type %>" name='answer<%= count%>[]' value="<%= c %>"><label class='quiz-choice' ><%= c %></label><br><% } %>
-                <% if(d){%><input type="<%= input_type %>" name='answer<%= count%>[]' value="<%= d %>"><label class='quiz-choice' ><%= d %></label><br><% } %>
-                <% if(e){%><input type="<%= input_type %>" name='answer<%= count%>[]' value="<%= e %>"><label class='quiz-choice' ><%= e %></label><br><% } %>
+                <!-- OR Select Answer(s) -->
+                <% } else { %>
+
+                    <!-- Choice A (adding 'required' attribute or not)-->
+                    <% if(input_type == 'radio'){ %> <!-- Radio -->
+                        <input type="radio" name='answer<%= count%>[]' value="<%= a %>" required><label class='quiz-choice'><%= a %></label><br>
+                    <% } else { %><!-- Checkbox -->
+                        <input type="checkbox" name='answer<%= count%>[]' value="<%= a %>"><label class='quiz-choice'><%= a %></label><br>
+                    <% } %>
+
+                    <!-- Choice B -->
+                    <input type="<%= input_type %>" name='answer<%= count%>[]' value="<%= b %>"><label class='quiz-choice' ><%= b %></label><br>
+
+                    <!-- Additional Answer Choices C to E -->
+                    <% if(c){%><input type="<%= input_type %>" name='answer<%= count%>[]' value="<%= c %>"><label class='quiz-choice' ><%= c %></label><br><% } %>
+                    <% if(d){%><input type="<%= input_type %>" name='answer<%= count%>[]' value="<%= d %>"><label class='quiz-choice' ><%= d %></label><br><% } %>
+                    <% if(e){%><input type="<%= input_type %>" name='answer<%= count%>[]' value="<%= e %>"><label class='quiz-choice' ><%= e %></label><br><% } %>
+                <% } %>
                 <br>
-                <% count += 1 %>
+                <% count++ %>
             <% }) %>
             <button onclick='return hasOneCheckedBox(<%= problems.length %>)'>Submit</button>
         </form>
