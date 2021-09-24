@@ -19,16 +19,16 @@
 
                 <!-- Fill in the Answer -->
                 <% if(input_type == 'text'){ %> <!-- Radio -->
-                    <input type="text" name='answer<%= count%>[]' style='margin-top: 10px;' size=20 required><br>
+                    <input type="text" name='answer<%= count%>[]' style='margin-top: 10px; height: 21px; padding: 1px' size=20 required><br>
 
                 <!-- OR Select Answer(s) -->
                 <% } else { %>
 
-                    <!-- Choice A (adding 'required' attribute or not)-->
-                    <% if(input_type == 'radio'){ %> <!-- Radio -->
-                        <input type="radio" name='answer<%= count%>[]' value="<%= a %>" required><label class='quiz-choice'><%= a %></label><br>
+                    <!-- Choice A -->
+                    <% if(input_type == 'radio'){ %> <!-- Radio (adds 'required' attribute) -->
+                        <input type="radio" name='answer<%= count%>[]' value="<%= a %>" style="margin-top: 8px;" required><label class='quiz-choice'><%= a %></label><br>
                     <% } else { %><!-- Checkbox -->
-                        <input type="checkbox" name='answer<%= count%>[]' value="<%= a %>"><label class='quiz-choice'><%= a %></label><br>
+                        <input type="checkbox" name='answer<%= count%>[]' value="<%= a %>" style="margin-top: 8px;"><label class='quiz-choice'><%= a %></label><br>
                     <% } %>
 
                     <!-- Choice B -->

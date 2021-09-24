@@ -3,7 +3,7 @@ body{
 }
 
 #title{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
 }
 
@@ -131,12 +131,22 @@ body{
 
 #quiz-form{
     margin: 0 auto; 
-    width: 600px;
+    width: 800px;
 }
 
-#quiz-form input{
+input{
     padding-top: 10px;
+    margin-left: 21px;
 }
+
+input[type='radio']:hover, input[type='checkbox']:hover, button:hover{
+    cursor: pointer;
+}
+
+.quiz-choice{
+    margin-left: 5px;
+}
+
 .quiz-question, .quiz-choice{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 15px;
