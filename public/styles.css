@@ -9,12 +9,7 @@ body{
 
 #time{
     text-align: center;
-    font-family: sans-serif;
-    font-weight: bold;
-    position: relative;
-    color: white;
-    left: 370;
-    bottom: -4px;
+    left: 390;
 }
 
 #time:hover{
@@ -26,17 +21,18 @@ body{
     position: relative;
     margin: auto;
     background-color: black;
-    height: 4%;
+    height: 5%;
     width: 850px;
+    border-radius: 35px;
 }
 
 #nav-bar a{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
+    font-size: 17px;
     color: white;
     position: relative;
     padding-top: 17px;
-    bottom: -4px;
+    bottom: -8px;
     text-decoration: none;
 }
 
@@ -46,8 +42,8 @@ body{
 }
 
 #nav-home{left: 30}
-#nav-about{left: 150}
-#nav-contacts{left: 290}
+#nav-about{left: 90}
+#nav-contacts{left: 150}
 
 #quiz-grid{
     display: grid;
@@ -64,7 +60,7 @@ body{
 }
 
 .quiz_img:hover{
-    border-color: red;
+    border-color: blue;
 }
 
 .quiz_title{
