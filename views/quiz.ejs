@@ -12,7 +12,10 @@
             <% problems.forEach(problem => { %>
 
                 <!-- Deconstructs the problem -->
-                <% const {input_type, question, a, b, c, d, e} = problem %>
+                <% const {input_type, question, image, width, height, a, b, c, d, e} = problem %>
+
+                <!-- IMAGE -->
+                <% if(problem.image) {%><img src='/images/<%= image %>' alt='image not found' width='<%= width %>' height='<%= width %>'><br><br><% } %>
 
                 <!-- QUESTION -->
                 <label class='quiz-question' for='answer<%= count%>[]' name='question<%= count%>'><%= count %>. <%= question %></label><br>
