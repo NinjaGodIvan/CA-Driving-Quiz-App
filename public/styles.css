@@ -81,7 +81,7 @@ body{
 
 /***** ABOUT PAGE *****/
 
-.about_title, .about_desc, #quiz_types li{
+.about_title, .about_desc, #tips li, .helpful_links{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     position: relative;
     left: 300;
@@ -92,17 +92,23 @@ body{
 .about_title{
     font-size: x-large;
 }
-/* CSS for the quiz types */
-#quiz_types li{
+
+/* Tips of passing the quizzes */
+#tips li{
     font-size: 15px;
+}
+
+/* Helpful links */
+.helpful_links{
+    text-decoration: none;
 }
 
 /***** CONTACTS *****/
 
+/* Contact Types = (Social Media and Contacts */
 .contacts-type, #contact-info p{
     text-align: center;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
 }
 
 #media-grid{
@@ -118,9 +124,19 @@ body{
     height: 70px;
 }
 
-#contact-info p{
+/* Contacts table */
+#contacts{
+    margin: 0 auto;
+    border-spacing: 1em;
+}
+
+.contact, .contact-value{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.contact{
+    text-align: right;
     font-weight: bold;
-    font-size: 18px;
 }
 
 /***** QUIZ PAGE *****/
