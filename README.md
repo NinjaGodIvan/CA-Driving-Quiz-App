@@ -8,10 +8,7 @@ CA Driving Quiz App is a website that includes various quizzes that will allow t
 
 **IDEs:** VS Code, Atom
 
-
 ## **How to Run the App**
-
-*Note: The project is currently under development. Some features may not function properly since they are not fully implemented yet.*
 
 ### **Uploading the App**
 
