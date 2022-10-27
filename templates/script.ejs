@@ -1,5 +1,8 @@
 <script>
 
+    //Gets today's year
+    var currentYear = new Date().getFullYear()
+
     //Checks if each question has at least one 'checkbox' choice checked 
     const hasOneCheckedBox = length => {
 
@@ -70,10 +73,16 @@
         document.getElementById("time").innerHTML = `${months[d.getMonth()]}, ${d.getDate()} ${d.getFullYear()} ${reformatTime(d.getHours(), d.getMinutes())}`
     }
 
+
     //Date and time is updated every second.
     setInterval(getCurrentDateAndTime, 1000)
 
     //Need to call to prevent the delay of displaying time by 1 second
     getCurrentDateAndTime()
 
+    //Need to display the current year on "copyright" footer
+    document.getElementById('publisher').innerHTML = `Copyright &copy ${currentYear} | Ivan Baradi`
+
+    //Need to display the current year version of CA handbook on 'About' page (Will raise error if user is not on 'About' page)
+    document.querySelector('.handbook').innerHTML = `${currentYear} CA Driver's Handbook`
 </script>
